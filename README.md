@@ -51,17 +51,15 @@ Du findest im Repository eine Datei:
 src/main/java/Main.java
 ```
 
-Ergänze den Code so, dass beim Ausführen des Programms **Hello MEITREX** auf der Konsole ausgegeben wird.
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        // TODO: Gib "Hello MEITREX" auf der Konsole aus
-    }
-}
+Ergänze den Code so, dass beim Ausführen die Funktionen
 ```
-
+public static int add(int a, int b)
+public static int subtract(int a, int b)
+public static int multiply(int a, int b)
+public static int factorial(int n)
 ---
+korrekt berechnet werden.
+
 
 ## Automatische Tests
 
