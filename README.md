@@ -8,13 +8,16 @@ Das Ergebnis der automatisierten Tests wird dir in dem Code Assignment in MEITRE
 
 ## Ziel der Aufgabe
 
-Schreibe ein einfaches Java-Programm, das auf der Konsole den Text  
+Schreibe ein einfaches Java-Programm, das die 4 Funktionen 
 ```
-Hello MEITREX
+public static int add(int a, int b)
+public static int subtract(int a, int b)
+public static int multiply(int a, int b)
+public static int factorial(int n)
 ```
-ausgibt.
+korrekt berechnet.
 
-Diese Aufgabe soll dir zeigen, wie du deinen Code mit **Git** einreichst und dein Ergebnis in **MEITREX** einsiehst 
+Diese Aufgabe soll dir zeigen, wie du deinen Code mit **Git** einreichst und dein Ergebnis in **MEITREX** einsiehst. Außerdem kann der Tutor dir Fragen zum code beantworten, nachdem du eine Lösung eingereicht hast. Tob dich aus :)
 
 ---
 
