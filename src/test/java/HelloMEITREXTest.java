@@ -1,24 +1,38 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
 class HelloMEITREXTest {
 
     @Test
-    void testPrintsHelloMEITREX() {
-        PrintStream originalOut = System.out;
-        ByteArrayOutputStream buffer = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(buffer));
-        try {
-            Main.main(new String[0]);
-        } finally {
-            System.setOut(originalOut);
-        }
-        // Accept with or without trailing newline
-        String out = buffer.toString().replace("\r", "");
-        if (out.endsWith("\n")) out = out.substring(0, out.length() - 1);
-        assertEquals("Hello MEITREX", out, "Expected exact output: Hello MEITREX");
+    void testAdd() {
+        assertEquals(8, Main.add(5, 3), "5 + 3 should equal 8");
+        assertEquals(0, Main.add(0, 0), "0 + 0 should equal 0");
+        assertEquals(-2, Main.add(-5, 3), "-5 + 3 should equal -2");
+        assertEquals(100, Main.add(50, 50), "50 + 50 should equal 100");
+    }
+
+    @Test
+    void testSubtract() {
+        assertEquals(2, Main.subtract(5, 3), "5 - 3 should equal 2");
+        assertEquals(0, Main.subtract(0, 0), "0 - 0 should equal 0");
+        assertEquals(-8, Main.subtract(-5, 3), "-5 - 3 should equal -8");
+        assertEquals(0, Main.subtract(50, 50), "50 - 50 should equal 0");
+    }
+
+    @Test
+    void testMultiply() {
+        assertEquals(15, Main.multiply(5, 3), "5 * 3 should equal 15");
+        assertEquals(0, Main.multiply(0, 5), "0 * 5 should equal 0");
+        assertEquals(-15, Main.multiply(-5, 3), "-5 * 3 should equal -15");
+        assertEquals(100, Main.multiply(10, 10), "10 * 10 should equal 100");
+    }
+
+    @Test
+    void testFactorial() {
+        assertEquals(120, Main.factorial(5), "5! should equal 120");
+        assertEquals(1, Main.factorial(0), "0! should equal 1");
+        assertEquals(1, Main.factorial(1), "1! should equal 1");
+        assertEquals(24, Main.factorial(4), "4! should equal 24");
+        assertEquals(3628800, Main.factorial(10), "10! should equal 3628800");
     }
 }
